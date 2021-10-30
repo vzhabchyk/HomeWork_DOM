@@ -1,9 +1,9 @@
 const myText = document.getElementById('text');
-const invisibleText = document.getElementsByClassName('invisible');
+const invisibleText = document.getElementById('invisible');
 myText.onfocus = function () {
-  invisibleText[0].style.display = 'block';
+  invisibleText.classList.remove('hidden');
 }
 
 myText.onblur = function () {
-  invisibleText[0].style.display = 'none';
+  invisibleText.classList.add('hidden');
 }
